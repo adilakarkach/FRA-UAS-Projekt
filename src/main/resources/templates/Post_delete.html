@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Post löschen</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/Stylesheet-Forum.css}">
+</head>
+<body>
+	<h1>Lösche einen Post</h1>
+	<div class="text">
+		<fieldset>
+
+			<!-- This method can submit a request for deleting an object of the type UserForm
+	             to the controller through the users ID -->
+			<form th:action="@{/Post_delete}" th:object="${userForm}"
+				method="POST">
+				ID: <input type="text" th:field="*{UserID}" /><br> <input
+					type="submit" value="Delete" />
+			</form>
+		</fieldset>
+	</div>
+	<br>
+
+	<!-- Check if errorMessage is not null and not empty -->
+	<div th:if="${errorMessage}" th:utext="${errorMessage}"
+		style="color: red; font-style: italic;">...</div>
+
+	<!-- When clicking then user gets to Forum_List file -->
+	<button onclick="document.location='/Forum_List'">Zurueck</a>
+</body>
+</html>

@@ -1,0 +1,111 @@
+/* Styles the body
+   The picture on screen is full sized*/
+body {
+	margin: 0;
+}
+
+/* Highlights the title of the index page and sets text color */
+mark {
+	background-color: #D32F2F;
+	color: white;
+	opacity: .6;
+}
+
+/* Styles the heading */
+h1 {
+	font-family: Impact;
+	color: white;
+	font-size: 60px;
+}
+
+/* Styles the third heading */
+h3 {
+	font-family: Impact;
+	color: white;
+}
+
+/* Styles the design of the picture and text
+   in the index file */
+.header {
+	background-image: url(/pictures/Header.jpg);
+	padding: 100px;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+}
+
+/* Container in which the navigation bar is stored */
+.container {
+	position: relative;
+	width: 50%;
+}
+
+/* Styles the footer where the icon is found */
+.footer {
+	margin-left: 30em;
+	background-image: url(/pictures/Footer.png);
+	padding: 40px;
+	padding-left: 100px;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background-size: 100px 100px;
+}
+
+/* The animation for the navigation bar which is hidden at first
+   Therefore hidden and width is 0 */
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #330099;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+}
+
+/* When hovering over the icon the width widens
+   and navigation bar is visible*/
+.container:hover .overlay {
+	width: 100%;
+}
+
+/* Styles the text and form from navigation bar
+   with the help of transform */
+.navigation {
+	font-family: Impact;
+	white-space: nowrap;
+	color: white;
+	font-size: 30px;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+/* Text without hovering on it appears white */
+a {
+	color: white;
+}
+
+/* When hovering on text it appears red */
+a:hover {
+	color: red;
+}
+
+/* Defines the speacing between words */
+wordspace {
+	word-spacing: 80px;
+}
+
+/* Defines the text from navigation next to the icon */
+navtext {
+	font-family: Impact;
+	color: red;
+	text-align: bottom left;
+	padding: 50px;
+	padding-left: 50px;
+}

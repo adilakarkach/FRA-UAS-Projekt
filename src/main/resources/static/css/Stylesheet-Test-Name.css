@@ -1,0 +1,121 @@
+/* Styles the body
+   It contains a picture */
+body {
+	background-color: black;
+	background-image: url(/pictures/Test_Name.png);
+	padding: 275px;
+	background-size: 225px 400px;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+/* Styles the fields the texts are in */
+fieldset {
+	text-align: center;
+	display: block;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 0.80em;
+    width: 500px;
+	padding-bottom: 0.900em;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	border: 2px groove(internal value);
+}
+
+/* Styles the text and places it in the center */
+.text{
+	font-family: 'Courier New', monospace;
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	top: 40%;
+	left: 40%;
+	margin-left: -50px; /* margin is -0.5 * dimension */
+	margin-top: -25px;
+}
+
+/* Container in which the navigation bar is stored */
+.container {
+	position: relative;
+	width: 30%;
+}
+
+/* Styles the footer where navigation is found
+   It is displayed at the upper left half because text is
+   placed in the middle and pushes it */
+.footer {
+	word-spacing: 1cm;
+	font-family: 'Courier New', monospace;
+	color: white;
+	font-size: 25px;
+	margin-left: 30em;
+	padding: 10px;
+	width: 80px;
+	height: 80px;
+	top: 30%;
+	left: 30%;
+	margin-left: -30px;
+	margin-top: -25px;
+}
+
+/* The animation for the navigation bar which is hidden at first
+   Therefore hidden and width is 0 */
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+}
+
+/* When hovering over the spot the width widens
+   and navigation bar is visible*/
+.container:hover .overlay {
+	width: 100%;
+}
+
+/* Styles the button */
+button {
+	background-color: #17202A;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+/* Styles the text and form from navigation bar
+   with the help of transform */
+.navigation {
+	font-family: Impact;
+	white-space: nowrap;
+	color: black;
+	font-size: 30px;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+/* Text without hovering on it appears white */
+a {
+	color: black;
+}
+
+/* When hovering on text it appears red */
+a:hover {
+	color: red;
+}

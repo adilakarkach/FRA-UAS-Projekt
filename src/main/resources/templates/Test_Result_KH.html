@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/Stylesheet-Result-Kakashi.css">
+<title>Ergebnis: Kakashi</title>
+<body>
+	<div class="text">
+		<fieldset>
+			<p>
+				Glückwunsch
+
+				<!-- Displays name of last created user name to users result -->
+				<mark>
+					<tr th:each="name_Test, iterStat : ${name_results}"
+						th:if="${iterStat.index >= iterStat.size-1}">
+						<td th:utext="${name_Test.userName_Test}">...</td>
+					</tr>
+				</mark>
+				! Dein Charakter ist:
+			</p>
+
+			<!-- Displays result text -->
+			<p>
+				<mark>Kakashi Hatake</mark>
+			</p>
+			Du bist weise, schlagfertig und stark! Deine Mitmenschen respektieren
+			dich.<br> Du hast klare Prinzipien und stehst zu deinen
+			Kameraden.<br> Intelligenz und Talente wurden dir in die Wiege
+			gelegt. Dennoch wirkst du oft verträumt und kommst immer zu spät.<br>
+			Dein liebstes Hobby kann auf viele Menschen erstmal schräg wirken.
+			Liest du etwa auch das Buch? ;-)<br>
+		</fieldset>
+		<br> &#10023;<br>
+		<mark>
+			Du bist bis zu...<br>
+
+			<!-- Displays the statistics to the user -->
+			<tr th:each="test_Statistics, iterStat : ${stats}"
+				th:if="${iterStat.index >= iterStat.size-1}">
+				<td th:utext="${test_Statistics.percKH}">...</td>
+			</tr>
+			% Kakashi<br>
+			<tr th:each="test_Statistics, iterStat : ${stats}"
+				th:if="${iterStat.index >= iterStat.size-1}">
+				<td th:utext="${test_Statistics.percSU}">...</td>
+			</tr>
+			% Sasuke<br>
+			<tr th:each="test_Statistics, iterStat : ${stats}"
+				th:if="${iterStat.index >= iterStat.size-1}">
+				<td th:utext="${test_Statistics.percNU}">...</td>
+			</tr>
+			% Naruto<br>
+			<tr th:each="test_Statistics, iterStat : ${stats}"
+				th:if="${iterStat.index >= iterStat.size-1}">
+				<td th:utext="${test_Statistics.percSH}">...</td>
+			</tr>
+			% Sakura<br>
+			<br>
+			<tr th:each="test_Statistics, iterStat : ${stats}"
+				th:if="${iterStat.index >= iterStat.size-1}">
+				<td th:utext="${test_Statistics.otherUsers}">...</td>
+			</tr>
+			% der User hatten ebenfalls dieses Ergebnis!<br>
+		</mark>
+		&#10023;<br>
+		<br>
+		<mark>Hinterlasse eine Bewertung/ein Kommentar an unserer
+			Pinnwand!</mark>
+
+		<!-- This method will delete the object created for the users result -->
+		<form th:action="@{/Forum_List}" th:object="${nameForm_Test}"
+			method="POST">
+			<button type="submit" value="delete">&#9998;</button>
+		</form>
+
+		<!-- This method will delete the object created for the users result -->
+		<form th:action="@{/Test_Result_NU}" th:object="${nameForm_Test}"
+			method="POST">
+			<button type="submit" value="delete">&#8962; Home</button>
+		</form>
+		</form>
+		<body>
+	</div>
+	</div>
+
+</body>
+</html>

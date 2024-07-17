@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/Stylesheet-Test-Name.css">
+<title>Test</title>
+<body>
+	<div class="text">
+
+		<!-- Through post method the results the username and test results can be stored
+		     in an object of the type NameForm_Test -->
+		<form th:action="@{/Test_Name}" th:object="${nameForm_Test}"
+			method="POST">
+			<p>
+			<fieldset>
+				Je mehr Fragen du beantwortest, desto genauer ist dein Endresultat!
+				Wehe du wählst nichts aus.
+				</p>
+			</fieldset>
+			<br>
+			<fieldset>
+
+				<!-- User puts his username -->
+				<p>1. Gebe bitte deinen Namen ein.</p>
+				<label for="user_name">Name:</label> <br> <input type="text"
+					th:field="*{userName_Test}" value="Shinobi" />
+			</fieldset>
+			<br>
+
+			<fieldset>
+
+				<!-- User picks his answers via checkboxes
+				     They are stored into the users results -->
+				<p>2. Was isst du hiervon am liebsten?</p>
+				<input type="checkbox" name="answer1" th:field="*{userResult_Test}"
+					id="a_0" value="NU"> <label for="a_0">Ramen</label><br>
+					
+				<input type="checkbox" name="answer1" th:field="*{userResult_Test}"
+					id="a_0" value="KH"> <label for="a_1">gegrillte
+					Makrele</label><br>
+					
+					<input type="checkbox" name="answer1"
+					th:field="*{userResult_Test}" id="a_1" value="SU"> <label
+					for="a_1">Reiskuchen</label><br>
+					
+					<input type="checkbox"
+					name="answer1" th:field="*{userResult_Test}" id="a_2" value="SH">
+				<label for="a_2">Süßes</label>
+			</fieldset>
+			<br>
+
+			<fieldset>
+				<p>3. Was ist deine Lieblingsbeschäftigung?</p>
+				<input type="checkbox" name="answer2" th:field="*{userResult_Test}"
+					id="a_3" value="SU"> <label for="a_3">Trainieren</label><br>
+					
+				<input type="checkbox" name="answer2" th:field="*{userResult_Test}"
+					id="a_4" value="NU"> <label for="a_4">Streiche</label><br>
+					
+				<input type="checkbox" name="answer2" th:field="*{userResult_Test}"
+					id="a_5" value="KH"> <label for="a_5">Lesen</label><br>
+					
+				<input type="checkbox" name="answer2" th:field="*{userResult_Test}"
+					id="a_6" value="SH"> <label for="a_6">Quiz-Spiele</label>
+			</fieldset>
+			<br>
+
+			<fieldset>
+				<p>4. Welche dieser Staerken trifft eher auf dich zu?</p>
+				<input type="checkbox" name="answer3" th:field="*{userResult_Test}"
+					id="a_7" value="NH"> <label for="a_7">Intelligenz</label><br>
+					
+				<input type="checkbox" name="answer3" th:field="*{userResult_Test}"
+					id="a_8" value="SU"> <label for="a_8">Stärke</label><br>
+					
+				<input type="checkbox" name="answer3" th:field="*{userResult_Test}"
+					id="a_9" value="KH"> <label for="a_9">Tugendhaftigkeit</label><br>
+					
+				<input type="checkbox" name="answer3" th:field="*{userResult_Test}"
+					id="a_10" value="NU"> <label for="a_10">Ehrgeiz</label>
+			</fieldset>
+			<br>
+
+			<fieldset>
+				<p>5. Welche dieser Schwaechen trifft eher auf dich zu?</p>
+				<input type="checkbox" name="answer4" th:field="*{userResult_Test}"
+					id="a_11" value="NU"> <label for="a_11">Impulsiv</label><br>
+					
+				<input type="checkbox" name="answer4" th:field="*{userResult_Test}"
+					id="a_12" value="SU"> <label for="a_12">Niedriges
+					Empathievermögen</label><br>
+					
+					<input type="checkbox" name="answer4"
+					th:field="*{userResult_Test}" id="a_13" value="KH"> <label
+					for="a_13">Bindungsprobleme</label><br>
+					
+					<input type="checkbox"
+					name="answer4" th:field="*{userResult_Test}" id="a_14" value="SH">
+				<label for="a_14">Niedriges Selbstwertgefühl</label>
+			</fieldset>
+			<br>
+
+			<fieldset>
+				<p>6. Ich habe eine Mission und ich...</p>
+				<input type="checkbox" name="answer5" th:field="*{userResult_Test}"
+					id="a_15" value="KH"> <label for="a_15">... komme
+					zu spät, weil ich vom Pfad des Lebens abgekommen bin.</label><br>
+					<input
+					type="checkbox" name="answer5" th:field="*{userResult_Test}"
+					id="a_16" value="SU"> <label for="a_16">... komme
+					pünktlich.</label><br>
+					
+					<input type="checkbox" name="answer5"
+					th:field="*{userResult_Test}" id="a_17" value="NU"><label
+					for="a_17">... habe verschlafen und konnte mir nicht mal
+					die Zähne putzen!</label><br>
+					
+					<input type="checkbox" name="answer5"
+					th:field="*{userResult_Test}" id="a_18" value="SH"> <label
+					for="a_18">... komme etwas früher, da ich nervös bin.</label>
+			</fieldset>
+			<br>
+
+			<fieldset>
+				<p>7. Als Haustier hätte ich gerne...</p>
+				<input type="checkbox" name="answer6" th:field="*{userResult_Test}"
+					id="a_19" value="NU"> <label for="a_19">... Frösche</label><br>
+					
+				<input type="checkbox" name="answer6" th:field="*{userResult_Test}"
+					id="a_20" value="SU"> <label for="a_20">...
+					Schlangen</label><br>
+					
+					<input type="checkbox" name="answer6"
+					th:field="*{userResult_Test}" id="a_21" value="KH"> <label
+					for="a_21">... Hunde</label><br>
+					
+					<input type="checkbox"
+					name="answer6" th:field="*{userResult_Test}" id="a_22" value="SH">
+				<label for="a_22">... Schnecken</label>
+			</fieldset>
+			<br>
+
+			<fieldset>
+				<p>8. Wenn es jemanden schlecht geht, bin ich gut darin die
+					Person zu trösten.</p>
+				<input type="checkbox" name="answer7" th:field="*{userResult_Test}"
+					id="a_23" value="NU"> <label for="a_23">Ich bringe
+					die Person wieder zum lachen und motiviere sie!</label><br> <input
+					type="checkbox" name="answer7" th:field="*{userResult_Test}"
+					id="a_24" value="SU"> <label for="a_24">Ich wüsste
+					nicht wirklich wie.</label><br> <input type="checkbox" name="answer25"
+					th:field="*{userResult_Test}" id="a_20" value="KH"> <label
+					for="a_25">Ich höre der Person gerne zu und gebe ihr den
+					nötigen Rat.</label><br> <input type="checkbox" name="answer7"
+					th:field="*{userResult_Test}" id="a_26" value="SH"> <label
+					for="a_26">Manchmal sage ich die falschen Sachen, aber
+					meine es nur gut.</label>
+			</fieldset>
+
+			<br>
+
+			<!-- When clicking then user gets to Forum_List file -->
+			<button type="submit" th:onclick="checkName()"
+				th:src="@{check_name.js}">Fertig</button>
+		</form>
+
+		<!-- Checks whether name is empty -->
+		<script th:inline="javascript">
+			function checkName() {
+				var name_check = document.getElementById('userName_Test').value;
+				if (name_check === "") {
+					alert("Gebe bitte einen Usernamen ein!");
+					window.open('/Test_Name');
+				}
+			}
+		</script>
+
+
+	</div>
+
+</body>
+<div class="container">
+	<footer>
+		<div class="footer">
+			<p>&#10023;Navigation</p>
+		</div>
+	</footer>
+	<div class="overlay">
+		<div class="navigation">
+			<div class="wordspace">
+
+				<!-- Displays navigation. When clicking user gets to index file -->
+				<a href="/Index">Home </a>
+			</div>
+		</div>
+	</div>
+</div>
+</html>

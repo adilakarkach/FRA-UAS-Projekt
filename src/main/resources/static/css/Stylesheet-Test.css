@@ -1,0 +1,38 @@
+/* Styles the body
+   It contains a picture */
+body {
+	background-color: #F0B27A;
+	background-image: url(/pictures/Test_Start.png);
+	padding: 275px;
+	background-size: 338px 600px;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+/* Styles the text and places it in the center */
+.text {
+	font-family: 'Courier New', monospace;
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	top: 40%;
+	left: 50%;
+	margin-left: -50px; /* margin is -0.5 * dimension */
+	margin-top: -25px;
+}
+
+/* Styles the button */
+.button {
+	background-color: #17202A;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Post hinzufügen</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/Stylesheet-Forum.css}">
+</head>
+<body>
+	<h1>Erstelle einen Post:</h1>
+	<div class="text">
+		<fieldset>
+
+			<!-- Through post method input values get stored into attributes of
+	             an object of the type UserForm -->
+			<form th:action="@{/Forum_Post}" th:object="${userForm}"
+				method="POST">
+				ID:<br> <input type="text" th:field="*{userID}" /> <br />
+				<br>Name:<br> <input type="text" th:field="*{userName}" />
+				<br />
+				<br>Nachricht:<br> <input type="text"
+					th:field="*{userMessage}" /> <br />
+				<br>
+				<button type="submit">Weiter</button>
+				<br>
+		</fieldset>
+		</form>
+	</div>
+	<br />
+
+	<!-- Check if errorMessage is not null and not empty -->
+	<div th:if="${errorMessage}" th:utext="${errorMessage}"
+		style="color: red; fontstyle: italic;">...</div>
+
+	<!-- When clicking then user gets to Forum_List file -->
+	<button onclick="document.location='/Forum_List'">
+		<< Zurueck</a>
+</body>
+</html>

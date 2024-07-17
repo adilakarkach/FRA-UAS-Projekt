@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+
+<!-- Setting title which is displayed in the browsers tab  -->
+<title>Kommentare</title>
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/Stylesheet-Forum.css}" />
+</head>
+<body>
+	<div class="text">
+		<h1>Willkommen an der Pinnwand!</h1>
+		<h2>Hinterlasse eine Nachricht/ein Kommentar...</h2>
+		<fieldset>
+		
+			<!-- Form for adding a comment -->
+			<form th:action="@{/Forum_Post}">
+				<input type="submit" value="Notiz hinzufügen" />
+			</form>
+			
+			<!-- Form for deleting a comment -->
+			<form th:action="@{/Post_delete}">
+				<input type="submit" value="Notiz löschen" />
+			</form>
+			<br /> <br />
+			<div>
+			
+				<!-- Setting tables ID for styling elements -->
+				<table id="t01">
+					<tr>
+						<th>ID</th>
+						<th>Username</th>
+						<th>Nachricht</th>
+					</tr>
+					
+					<!-- Going through each User object to display their input -->
+					<tr th:each="user : ${users}">
+						<td th:utext="${user.userID}">...</td>
+						<td th:utext="${user.userName}">...</td>
+						<td th:utext="${user.userMessage}">...</td>
+					</tr>
+				</table>
+			</div>
+		</fieldset>
+		<br>
+		
+		<!-- Displays button. When clicking user gets to index file -->
+		<button onclick="document.location='/Index'">
+			<< Home</a>
+	</div>
+</body>
+</html>

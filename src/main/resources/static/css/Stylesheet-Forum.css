@@ -1,0 +1,95 @@
+/* Styles the body
+   Background image is set */
+body {
+	background-image: url(/pictures/Forum_Start.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* Styles the heading */
+h1 {
+	font-family: Impact;
+	color: #2E4053;
+	
+}
+
+/* Styles the second and smaller heading */
+h2 {
+	font-family: Impact;
+	color: #2E4053;
+	
+}
+
+/* Styles the fieldset which is a field where the comment box
+   and buttons stand in
+   The borders have 3D effect through groove */
+fieldset {
+	text-align: center;
+	display: block;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding-top: 0.35em;
+	padding-bottom: 0.625em;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	border: 2px groove(internal value);
+}
+
+/* Styles the tables overall width */
+table {
+  width:50%;
+}
+
+/* Styles the borders of the columns and table */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: left;
+}
+
+/* Specifies the background color gray
+   for every even number of created column in the table */ 
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+/* Specifies the background color white
+   for every odd number of created column in the table */ 
+tr:nth-child(odd) {
+	background-color: white;
+}
+
+/* Specifies the style of the first column */ 
+#t01 th {
+  background-color: black;
+  color: white;
+}
+
+/* Styles the text in the table */
+.text {
+	font-family: 'Courier New', monospace;
+	color: #FF8A65;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* Sets the style of the button
+   The button has no border therefore only one solid color
+   The text color is white
+   It has no special text decoration
+   This font size is defined
+   The space around the button is defined through margin
+   Cursor type is a pointer (hand) */
+button {
+	background-color: #17202A;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}

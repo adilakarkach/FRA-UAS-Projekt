@@ -1,0 +1,52 @@
+/* Styles the body
+   It contains a picture */
+body {
+	background-color: #FCE4EC ;
+	background-image: url(/pictures/Sakura_Test.png);
+	padding: 275px;
+	background-size: 340px254px;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+/* Highlights text parts and defines text color */
+mark {
+	background-color: #ABEBC6 ;
+	color: white;
+}
+
+/* Styles the text and places it in the center */
+.text {
+	text-align: center;
+	font-family: 'Courier New', monospace;
+	color: black;
+	font-size: 20px;
+	position: absolute;
+	width: 400px;
+	height: 100px;
+	top: 10%;
+	left: 45%;
+	margin-left: -100px; /* margin is -0.5 * dimension */
+	margin-top: -50px;
+}
+
+/* Centers the form element */
+form {
+
+	text-align: center;
+	
+}
+
+/* Styles the button */
+button {
+	background-color: #17202A;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
